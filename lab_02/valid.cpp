@@ -19,7 +19,7 @@ int main () {
 
 	int number = -1; 
 
-	while (number < 0 || number > 100){
+	while (number =< 0 || number => 100){
 		cout << "Enter a number between 0 and 100" << endl;
 		cin >> number;
 
