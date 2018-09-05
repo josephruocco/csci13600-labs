@@ -24,7 +24,7 @@ int main () {
 	cout << "Please enter upper limit";
 	cin >> upper; 
 
-	for(int i = lower; i <= upper; i++)
+	for(int i = lower; i < upper; i++)
 	{
 		cout << i << " ";
 	}
