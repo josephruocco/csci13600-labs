@@ -1,6 +1,6 @@
 # lab_02 Details
 1. valid.cpp 
-   works as presented
+  ⇥ works as presented
 2. print-interval.cpp
    works as presented
 3. edit-array.cpp 
