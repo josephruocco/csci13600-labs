@@ -1,7 +1,5 @@
-Test Suite for Pig Latin translator  
+Lab 03 
 
-J Ruocco and J Lin
+J Ruocco  
 
-IF the first letter is a vowel, add "ay" to the end.
-ELSE move the first letter to the end and add "ay".
-
+All files work as described. Tests Included.
