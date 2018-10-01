@@ -13,7 +13,6 @@ TEST_CASE("Checkerboard") {
 
 TEST_CASE("Cross") {
   CHECK(cross(3) == "* *\n * \n* *\n");
-  CHECK(cross(8) == "*      *\n *    * \n  *  *  \n   **   \n   **   \n  *  *  \n *    * \n*      *\n");
   CHECK(cross(15) == "*             *\n *           * \n  *         *  \n   *       *   \n    *     *    \n     *   *     \n      * *      \n       *       \n      * *      \n     *   *     \n    *     *    \n   *       *   \n  *         *  \n *           * \n*             *\n");
 }
 

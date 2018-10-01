@@ -1,4 +1,4 @@
- #include "shapes.h"
+  #include "shapes.h"
 
 using std::endl;
 using std::cout;
@@ -24,41 +24,39 @@ std::string box(int width, int height){
 
 
 std::string checkerboard(int width, int height){
+  std::string str;
+    for (int row = 0; row < height; ++row) {
+        
+		for (int col = 0; col < width; ++col) {
+		       
+		  if (row % 2 == 0){
+		    if(col %2 == 0)
+			      str+="*";
+		    else
+		      str+=" ";
+			   
+		  }
+		  else{
+		    if(col %2 == 0)
+			      str+=" ";
+		    else
+		      str+="*";
+		  }
+		}
+		str+= "\n";
+	}
 
-   std::string result2;
- 
-   for(int k=1; k<= height; k++ ){
-    for(int m=1; m <= width; m++)
-    {
-
-      if(k % 2 == 0){
-         result2+= "*";
-	 if(m %2 == 0){
-	   result2+=" ";
-	 }
-      }
-      else if(k % 2 != 0){
-	result2+=" ";
-	if(m %2 == 0){
-	   result2+="*";
-	 }
-      }
-      if(m == width)
-	  result2 += "\n";
-    }
-  }
-
-   return result2;
-    
+    return str;
 }
 
 std::string cross(int size){
 
    std::string result2;
+
    
-   for(int k=0; k< size; k++)
+ for(int k=0; k< size; k++)
    {
-     for(int j=0; j<= size; j++){
+     for(int j=0; j<=  size; j++){
 
        if(size %2 == 0)
        {
@@ -136,13 +134,18 @@ std::string trapezoid(int width, int height){
   int stars = width;
 
   for(int i=0; i< height; i++){
-     for(int j=0; j<= stars+spaces; j++){
-      if(j <= spaces){
+     for(int j= 0; j < stars+spaces; j++){
+      if (height % 6 == 1) { 
+	return "Impossible shape!\n";
+	
+      }
+      if(j <  spaces){
 	str+= " ";
       }
       else{
 	str+= "*";
       }
+      
     }
     spaces += 1;
     stars -= 2;
