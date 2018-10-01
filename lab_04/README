@@ -1,0 +1,9 @@
+Lab 4, Joseph Ruocco
+
+to run: 
+	make main
+to run tests:
+	make tests
+
+
+ 
