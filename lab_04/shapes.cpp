@@ -52,41 +52,25 @@ std::string checkerboard(int width, int height){
 std::string cross(int size){
 
    std::string result2;
-
    
- for(int k=0; k< size; k++)
+ for(int k=0; k<= size; k++)
    {
-     for(int j=0; j<=  size; j++){
+     for(int j=1; j<= size; j++){
 
-       if(size %2 == 0)
-       {
-	  
-       }
-	  
-       if(j  ==  k)
-       {
-	 result2 += "*";
-       }
-       else if(j == (size - k)){
+       if(k==j || j==(size+1)-k)
 	 result2+= "*";
-       }
-       else{
-	 result2 += " ";
-       }
-
-    
-
-       
-       if(j == size ){
-	 result2 += "\n";
-       }
+       else
+	 result2+= " ";
 
      }
+     result2+="\n";
   }
 
    return result2;
     
 }
+
+
 
 
 std::string lower(int length){
