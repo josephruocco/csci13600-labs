@@ -1,0 +1,36 @@
+#include "catch.hpp"
+#include "numbers.h"
+
+TEST_CASE("Divisible") {
+  CHECK(isDivisibleBy(100, 25) == true);
+  CHECK(isDivisibleBy(35, 17) == false);
+}
+
+TEST_CASE("Count primes"){
+ CHECK(countPrimes(7, 13) == 4);
+ 
+}
+
+TEST_CASE("Largest twin prime") {
+  CHECK(largestTwinPrime(1, 31) == 1);
+  CHECK(largestTwinPrime(14, 16) == 14);
+}
+
+TEST_CASE("Twin primes") {
+  CHECK(isTwinPrime(101));
+}
+
+TEST_CASE("Next twin prime") {
+  CHECK(nextTwinPrime(3) ==  4);
+  CHECK(nextTwinPrime(5) ==  6);
+}
+
+TEST_CASE("Prime") {
+  CHECK(isPrime(2));
+  CHECK(isPrime(3));
+}
+
+TEST_CASE("Next Prime") {
+  CHECK(nextPrime(100)  == 102);
+
+}
