@@ -1,0 +1,7 @@
+make main
+  - runs all functions
+make tests
+  - runs testing suite
+  
+  
+  *note - tests for cross, lower tri, upper tri, and trap fail despite identical shapes
