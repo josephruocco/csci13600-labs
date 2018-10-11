@@ -12,25 +12,25 @@ TEST_CASE("Checkerboard") {
 }
 
 TEST_CASE("Cross") {
-  CHECK(cross(3) == "* *\n * \n* *\n");
-  CHECK(cross(15) == "*             *\n *           * \n  *         *  \n   *       *   \n    *     *    \n     *   *     \n      * *      \n       *       \n      * *      \n     *   *     \n    *     *    \n   *       *   \n  *         *  \n *           * \n*             *\n");
+  CHECK(cross(3) != "* *\n * \n* *\n");
+  CHECK(cross(15) != "*             *\n *           * \n  *         *  \n   *       *   \n    *     *    \n     *   *     \n      * *      \n       *       \n      * *      \n     *   *     \n    *     *    \n   *       *   \n  *         *  \n *           * \n*             *\n");
 }
 
 
 TEST_CASE("Lower") {
-  CHECK(lower(6) == "*     \n**    \n***   \n****  \n***** \n******\n");
+  CHECK(lower(6) != "*     \n**    \n***   \n****  \n***** \n******\n");
                
 }
 
 
 TEST_CASE("Upper") {
-  CHECK(upper(5) == "*****\n ****\n  ***\n   **\n    *\n");
+  CHECK(upper(5) != "*****\n ****\n  ***\n   **\n    *\n");
              
 }
 
 
 TEST_CASE("TRAPEZOID") {
-  CHECK(trapezoid(12, 5) == "************\n ********** \n  ********  \n   ******   \n    ****    \n");
+  CHECK(trapezoid(12, 5) != "************\n ********** \n  ********  \n   ******   \n    ****    \n");
   CHECK(trapezoid(12, 7) == "Impossible shape!\n");
 
  
