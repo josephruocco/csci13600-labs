@@ -1,0 +1,91 @@
+#include "encrypt.h"
+
+using std::endl;
+using std::cout;
+using std::cin;
+
+char test_ascii (){
+  std::string input; 
+  cout << "Input: ";
+  cin >> input; 
+
+  for(int i=0; i<input.length(); i++){
+    cout << input.substr(i,1) << (int)input[i] << std::endl;
+  }
+}
+
+char shiftChar(char c, int rshift){
+  
+  if(isspace(c))
+  {
+    return ' ';
+  }
+  else if(!isalpha(c) && !isdigit(c)){
+    return c;
+  }
+  else{
+    c += rshift;
+  }
+
+  if(c > 90 && c < 97){
+    c -= 26;
+  }
+   else if (c > 122){
+     c -= 26;
+   }
+  
+  return c;
+}
+
+std::string encryptCaesar(std::string plaintext, int rshift){
+
+  std::string encryption ="";
+  
+  for(int i=0; i < plaintext.length(); i++){
+    char c = shiftChar(plaintext[i], rshift);
+    encryption += c;
+  }
+
+  return encryption; 
+}
+
+
+std::string encryptVignere(std::string plaintext, std::string keyword){
+
+  std::string encryption = "";
+  
+  int j =0;
+  
+  for(int i=0; i < plaintext.length(); i++)
+  {
+      if(isalpha(plaintext[i]))
+      {
+	 plaintext[i] += keyword[j] - 'a';
+	 if (plaintext[i] > 'z' )
+	   plaintext[i] += - 'z' + 'a' - 1;
+	 if(j+1 == keyword.length())
+           j = 0;
+	 else
+	   j++;
+     }
+
+   
+   
+  }
+
+  return plaintext;
+}
+
+std::string decryptCaesar(std::string ciphertext,int  rshift){
+   std::string decryption ="";
+  
+  for(int i=0; i < ciphertext.length(); i++){
+    char c = shiftChar(ciphertext[i],-rshift);
+    decryption += c;
+  }
+
+  return decryption; 
+
+}
+
+
