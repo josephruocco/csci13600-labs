@@ -4,7 +4,7 @@ using std::endl;
 using std::cout;
 using std::cin;
 
-char test_ascii (){
+void test_ascii (){
   std::string input; 
   cout << "Input: ";
   cin >> input; 
