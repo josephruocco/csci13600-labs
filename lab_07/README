@@ -1,0 +1,7 @@
+lab 07, joseph ruocco 
+
+no catch tests 
+
+to run main target: make main 
+
+to redirect file input: ./main < testprog.cpp
