@@ -1,0 +1,29 @@
+#include "pretty.h"
+
+int main (){
+
+  std::string line, ret;
+  int open  = 0;
+  
+  while(getline(cin, line)){
+
+  
+    for(int i =0; i < open; ++i){
+      ret += "\t";
+    }
+     
+    ret += removeLeadingSpaces(line);
+    // remove leading whitespace
+   
+    open += countChar(line, '{');
+    open  -= countChar(line, '}');
+    
+    ret += "\n";
+     
+  }
+
+  cout << ret << endl;
+  // output test
+  
+  return 0;
+}
