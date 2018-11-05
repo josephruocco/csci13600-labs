@@ -103,7 +103,7 @@ double*  generateFreqs (){
   }
 
   for(int t =0; t < 26; t++){
-    freqs[t] = 100*(freqs[t]/letters);
+    freqs[t] = (freqs[t]/letters);
   }
 
   fin.close();
