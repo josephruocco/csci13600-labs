@@ -1,0 +1,24 @@
+#include "encryptPlus.h"
+
+int main()
+{
+  string source = "attack each day with an enthusiasm unkown to mankind";
+  double a[3]= {10,20,30};
+  double b[3]= {100,3,20};
+
+  string encoded = encode(source,5);
+  string decoded = decode(encoded,freqs);
+  cout << source << "\n";
+  cout << encoded << "\n";
+
+  cout << decoded << "\n";
+
+  source = "this is a test of";
+  encoded = encode(source,5);
+  decoded = decode(encoded,freqs);
+  cout << source << "\n";
+  cout << encoded << "\n";
+
+  cout << decoded << "\n";
+return 0;
+}
