@@ -1,0 +1,6 @@
+joseph ruocco, lab extra 0 
+
+to run main target: make main 
+
+main.cpp output prints freqs array with freqs generated from pride.txt
+as well as output originally in main.cpp 
