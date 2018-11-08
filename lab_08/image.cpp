@@ -156,32 +156,15 @@ void scale(){
       readImage(img, h, w);
 	// Now we can manipulate the image the way we like
 	// for example we copy its contents into a new array
-	int out[DUB_MAX_H][DUB_MAX_W];
-
-	int out_col = 0;
-	int out_row = 0;
-	int temp = 0;
+	int out[MAX_H][MAX_W];
 	
-	for(int row = 0; row > h*2 ; row++)
+	for(int row = h*2; row > 0; row--)
 	  {
-	    for(int col = 0; col < w*2; col++)
+	    for(int col = w*2; col > 0; col--)
 	      {
-		out[row][col] = img[row][col];
-
-                     int temp = img[row][col];
-
-                     out[out_row][out_col] = temp;
-
-                     out[out_row+1][out_col] = temp;
-
-                     out[out_row][out_col+1] = temp;
-
-                     out[out_row+1][out_col+1] = temp;
-
-                     out_col = out_col+2;
+		 out[row][col] = img[row/2][col/2];
 	      }
-
-	    out_row = out_row + 2;
+	    
 	}
 
 	// and save this new image to file "outImage.pgm"
@@ -297,30 +280,3 @@ void writeImage(string filename, int image[MAX_H][MAX_W], int height, int width)
 	return;
 }
 
-void writeImage(string filename, int image[DUB_MAX_H][DUB_MAX_W], int height, int width) {
-
-	ofstream ostr;
-	ostr.open(filename.c_str());
-	if (ostr.fail()) {
-		cout << "Unable to write file\n";
-		exit(1);
-	};
-
-	// print the header
-	ostr << "P2" << endl;
-	// width, height
-	ostr << width << ' ';
-	ostr << height << endl;
-	ostr << 255 << endl;
-
-	for (int row = 0; row < height*2; row++) {
-		for (int col = 0; col < width*2; col++) {
-			assert(image[row][col] < 256);
-			assert(image[row][col] >= 0);
-			ostr << image[row][col] << ' ';
-			ostr << endl;
-		}
-	}
-	ostr.close();
-	return;
-}
