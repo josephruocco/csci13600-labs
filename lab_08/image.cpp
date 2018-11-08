@@ -168,7 +168,7 @@ void scale(){
 	}
 
 	// and save this new image to file "outImage.pgm"
-	writeImage("scale.pgm", out, h, w);
+	writeImage("scale.pgm", out, h*2, w*2);
 
 }
 void pixelate(){
