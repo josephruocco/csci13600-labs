@@ -183,33 +183,12 @@ void pixelate(){
 	int out_row = 0;
 	int temp = 0;
 	
-	for(int row = 0; row < h*2; row++)
+	for(int row = 0; row < h*2; row+=2)
 	  {
-	    for(int col = 0; col < w*2; col++)
+	    for(int col = 0; col < w*2; col+=2)
 	      {
-		out[row][col] = img[row][col];
+		out[row][col] = (img [row][col] + img [row+1][col] + img[row][col+1] + img[row+1][col+1])/4;
 	      }
-	          out_col = 0;
-
-                     for(int col=0;col<w;col++)
-
-                     {
-
-		       int temp = (img[row][col] + img[row+1][col] + img[row][col+1] + img[row+1][col+1])/4 ;
-
-                     out[out_row][out_col] = temp;
-
-                     out[out_row+1][out_col] = temp;
-
-                     out[out_row][out_col+1] = temp;
-
-                     out[out_row+1][out_col+1] = temp;
-
-                     out_col = out_col+2;
-
-                     }
-
-                     out_row = out_row + 2;
 	}
 
 	writeImage("pixelate.pgm", out, h, w);
