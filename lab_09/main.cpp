@@ -33,15 +33,12 @@ int main(){
     move(&pos, &vel, 2.0); // object pos gets changed
     cout << pos.x << " " << pos.y << " " << pos.z << endl;
 
+
     std::cout << "Task E" << std::endl;
-     double x, y, z;
-    cout << "Enter position: ";
-    cin >> x >> y >> z;
-    Coord3D *ppos = createCoord3D(x,y,z);
-    
-    cout << "Enter velocity: ";
-    cin >> x >> y >> z;
-    Coord3D *pvel = createCoord3D(x,y,z);
+   
+    Coord3D *ppos = createCoord3D(10,20,30);
+  
+    Coord3D *pvel = createCoord3D(5.5,-1.4,7.77);
 
     move(ppos, pvel, 10.0);
 
