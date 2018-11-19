@@ -5,3 +5,12 @@ no catch tests
 to run main target: make main 
 
 to redirect file input: ./main < testprog.cpp
+
+============================================
+
+notes on codereview:
+
+easiest part: 
+- making minor changes to understand author's thinking
+hardest part: 
+- making improvements that make logical sense with the program       
