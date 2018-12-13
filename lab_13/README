@@ -1,0 +1,8 @@
+Lab 13
+
+to run main: 
+  make main or make
+  ./main
+to run test suite: 
+  make tests
+  ./tests
